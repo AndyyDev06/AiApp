@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>AI Buddy - Your Personal AI Assistant</title>
+    <title>AI Buddy - Smarter AI Assistant</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
@@ -15,7 +15,6 @@
         padding: 0;
         font-family: "Inter", sans-serif;
       }
-
       body {
         background: linear-gradient(135deg, #f9fafb, #eef1f5);
         color: #111827;
@@ -36,28 +35,14 @@
         top: 0;
         z-index: 10;
       }
-
       .logo {
         font-size: 1.8rem;
         font-weight: 700;
         color: #2563eb;
         transition: transform 0.3s;
       }
-
       .logo:hover {
         transform: scale(1.05);
-      }
-
-      nav a {
-        margin-left: 1.5rem;
-        text-decoration: none;
-        color: #374151;
-        font-weight: 500;
-        transition: color 0.3s;
-      }
-
-      nav a:hover {
-        color: #2563eb;
       }
 
       .hero {
@@ -68,26 +53,20 @@
         align-items: center;
         text-align: center;
         padding: 6rem 2rem 3rem;
-        position: relative;
         animation: fadeIn 1s ease-out;
       }
-
       .hero h1 {
         font-size: 3.5rem;
         margin-bottom: 1.5rem;
         font-weight: 700;
-        color: #111827;
         line-height: 1.2;
-        transition: all 0.3s ease;
       }
-
       .hero p {
         font-size: 1.5rem;
         margin-bottom: 2.5rem;
         color: #4b5563;
         max-width: 700px;
       }
-
       .cta-button {
         background-color: #2563eb;
         color: white;
@@ -99,7 +78,6 @@
         box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
         transition: all 0.3s ease;
       }
-
       .cta-button:hover {
         background-color: #1d4ed8;
         transform: translateY(-2px);
@@ -114,7 +92,6 @@
         justify-content: center;
         gap: 3rem;
       }
-
       .feature-box {
         background: #f3f4f6;
         padding: 2rem;
@@ -123,29 +100,122 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
         transition: transform 0.3s;
       }
-
       .feature-box:hover {
         transform: translateY(-5px);
       }
-
       .feature-box h3 {
         font-size: 1.5rem;
         margin-bottom: 1rem;
-        color: #111827;
       }
-
       .feature-box p {
         font-size: 1rem;
         color: #4b5563;
       }
 
-      footer {
-        padding: 1rem;
+      .pricing {
+        background: linear-gradient(to bottom, #ffffff, #f3f4f6);
+        padding: 5rem 2rem;
         text-align: center;
-        color: #9ca3af;
-        font-size: 0.875rem;
+      }
+      .pricing h2 {
+        font-size: 2.8rem;
+        margin-bottom: 2rem;
+      }
+      .pricing-container {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+      .price-card {
         background: white;
-        box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+        padding: 3rem 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+        max-width: 300px;
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+      }
+      .price-card:hover {
+        transform: translateY(-5px);
+        border: 2px solid #2563eb;
+      }
+      .price-title {
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #2563eb;
+      }
+      .price-amount {
+        font-size: 2.8rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+      }
+      .price-desc {
+        font-size: 1rem;
+        color: #4b5563;
+        margin-bottom: 2rem;
+      }
+      .price-card button {
+        background: #2563eb;
+        color: white;
+        border: none;
+        padding: 0.9rem 2rem;
+        border-radius: 0.75rem;
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+      .price-card button:hover {
+        background: #1d4ed8;
+      }
+
+      .testimonials {
+        background: white;
+        padding: 5rem 2rem;
+        text-align: center;
+      }
+      .testimonials h2 {
+        font-size: 2.8rem;
+        margin-bottom: 3rem;
+      }
+      .testimonial {
+        background: #f3f4f6;
+        padding: 2rem;
+        border-radius: 1rem;
+        margin: 0 auto 2rem;
+        max-width: 700px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      }
+      .testimonial p {
+        font-size: 1.2rem;
+        color: #374151;
+        margin-bottom: 1rem;
+      }
+      .testimonial-author {
+        font-weight: 600;
+        color: #2563eb;
+      }
+
+      footer {
+        padding: 2rem 1rem;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #9ca3af;
+        background: #ffffff;
+        border-top: 1px solid #e5e7eb;
+      }
+
+      @media (max-width: 700px) {
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+        .hero p {
+          font-size: 1.2rem;
+        }
+        .pricing-container {
+          flex-direction: column;
+          align-items: center;
+        }
       }
 
       @keyframes fadeIn {
@@ -170,21 +240,61 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 2rem; /* Prevent touching edges */
+        padding: 2rem;
       }
-
       .modal-content {
         background: white;
         border-radius: 1rem;
         padding: 3rem 3.5rem;
-        max-width: 680px;
+        max-width: 500px;
         width: 100%;
         box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
         animation: modalShow 0.4s ease forwards;
         position: relative;
-        font-family: "Inter", sans-serif;
       }
-
+      .modal-close {
+        position: absolute;
+        top: 1rem;
+        right: 1.25rem;
+        font-size: 1.5rem;
+        color: #888;
+        cursor: pointer;
+      }
+      .modal-close:hover {
+        color: #2563eb;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      form label {
+        font-weight: 600;
+        font-size: 1.25rem;
+      }
+      form input[type="email"] {
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        border: 1.8px solid #cbd5e1;
+        border-radius: 0.5rem;
+      }
+      form input[type="email"]:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 6px rgba(37, 99, 235, 0.5);
+        outline: none;
+      }
+      form button {
+        background-color: #2563eb;
+        color: white;
+        padding: 0.9rem;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 0.75rem;
+        cursor: pointer;
+      }
+      form button:hover {
+        background-color: #1d4ed8;
+      }
       @keyframes modalShow {
         from {
           opacity: 0;
@@ -195,136 +305,18 @@
           transform: scale(1);
         }
       }
-
-      .modal-close {
-        position: absolute;
-        top: 1rem;
-        right: 1.25rem;
-        font-size: 1.5rem;
-        color: #888;
-        cursor: pointer;
-        transition: color 0.2s ease;
-      }
-
-      .modal-close:hover {
-        color: #2563eb;
-      }
-
-      .modal-body {
-        display: flex;
-        gap: 2rem;
-        justify-content: space-between;
-      }
-
-      /* Left side - email signup */
-      form {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        max-width: 320px;
-      }
-
-      form label {
-        font-weight: 600;
-        font-size: 1.25rem;
-        color: #111827;
-      }
-
-      form input[type="email"] {
-        padding: 0.75rem 1rem;
-        font-size: 1rem;
-        border: 1.8px solid #cbd5e1;
-        border-radius: 0.5rem;
-        transition: border-color 0.3s ease;
-      }
-
-      form input[type="email"]:focus {
-        outline: none;
-        border-color: #2563eb;
-        box-shadow: 0 0 6px rgba(37, 99, 235, 0.5);
-      }
-
-      form button {
-        background-color: #2563eb;
-        color: white;
-        padding: 0.9rem;
-        font-size: 1.2rem;
-        border: none;
-        border-radius: 0.75rem;
-        cursor: pointer;
-        box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
-        transition: background-color 0.3s ease;
-      }
-
-      form button:hover {
-        background-color: #1d4ed8;
-      }
-
-      /* Right side - demo */
-      .demo {
-        flex: 1;
-        background: #f3f4f6;
-        border-radius: 0.75rem;
-        padding: 1.5rem 1.75rem;
-        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
-        font-size: 0.95rem;
-        color: #374151;
-        line-height: 1.4;
-        user-select: none;
-      }
-
-      .demo .line {
-        margin-bottom: 1rem;
-        padding: 0.5rem 1rem;
-        background: white;
-        border-radius: 0.5rem;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-      }
-
-      .demo .line.user {
-        font-weight: 600;
-        color: #2563eb;
-      }
-
-      .demo .line.ai {
-        font-style: italic;
-        color: #6b7280;
-      }
-
-      /* Responsive */
-      @media (max-width: 700px) {
-        .modal-content {
-          max-width: 90%;
-          padding: 2rem 2rem;
-        }
-        .modal-body {
-          flex-direction: column;
-          gap: 1.5rem;
-        }
-        form {
-          max-width: 100%;
-          flex: none;
-        }
-      }
     </style>
   </head>
   <body>
     <header>
       <div class="logo">AI Buddy</div>
-
-      <!--
-      <nav>
-        <a href="#login">Login</a>
-        <a href="#signup">Sign Up</a>
-      </nav>
-    --></header>
+    </header>
 
     <main class="hero">
-      <h1 id="mainTitle">Meet Your Smarter AI Assistant 🤖✨</h1>
+      <h1>Meet Your Smarter AI Assistant 🤖✨</h1>
       <p>
-        Unlock the full potential of AI with more freedom, more conversations,
-        and more real help. 100 free chats every month, no strings attached.
+        Unlock the full potential of AI with more freedom, conversations, and
+        real help.
       </p>
       <button class="cta-button" id="getStartedBtn">
         Get Started for Free 🚀
@@ -335,8 +327,8 @@
       <div class="feature-box">
         <h3>Generous Free Plan 🎁</h3>
         <p>
-          Start with 100 free chats every month. Build habits before you ever
-          need to upgrade.
+          Start with 100 free chats monthly. Build habits before you ever need
+          to upgrade.
         </p>
       </div>
       <div class="feature-box">
@@ -349,67 +341,76 @@
       <div class="feature-box">
         <h3>Fast & Secure ⚡🔒</h3>
         <p>
-          Built with state-of-the-art AI models and encrypted data protection
-          for your privacy.
+          State-of-the-art AI models and encrypted data protection for your
+          privacy.
         </p>
       </div>
     </section>
 
-    <footer>&copy; 2025 AI Buddy. All rights reserved.</footer>
+    <section class="pricing">
+      <h2>Simple Pricing for Everyone</h2>
+      <div class="pricing-container">
+        <div class="price-card">
+          <div class="price-title">Basic</div>
+          <div class="price-amount">$4.99/mo</div>
+          <div class="price-desc">Perfect to start your AI journey.</div>
+          <button>Choose Basic</button>
+        </div>
+        <div class="price-card">
+          <div class="price-title">Pro</div>
+          <div class="price-amount">$9.99/mo</div>
+          <div class="price-desc">
+            Unlimited chats, custom personalities, advanced tools.
+          </div>
+          <button>Choose Pro</button>
+        </div>
+        <div class="price-card">
+          <div class="price-title">Team</div>
+          <div class="price-amount">$44.99/mo</div>
+          <div class="price-desc">
+            For growing teams with shared workspaces & admin tools.
+          </div>
+          <button>Choose Team</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <h2>What Our Users Say</h2>
+      <div class="testimonial">
+        <p>
+          "AI Buddy has become my daily assistant for both work and personal
+          tasks. So easy to use!"
+        </p>
+        <div class="testimonial-author">— Sarah L.</div>
+      </div>
+      <div class="testimonial">
+        <p>
+          "The Pro plan is totally worth it. The custom modes are a game changer
+          for productivity."
+        </p>
+        <div class="testimonial-author">— Mike D.</div>
+      </div>
+    </section>
+
+    <footer>&copy; 2025 AI Buddy. Terms · Privacy · Contact</footer>
 
     <!-- Modal -->
-    <div
-      id="signupModal"
-      class="modal"
-      aria-hidden="true"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="modalTitle"
-    >
+    <div id="signupModal" class="modal" aria-hidden="true">
       <div class="modal-content">
-        <span class="modal-close" id="closeModal" aria-label="Close"
-          >&times;</span
-        >
-        <h2 id="modalTitle" style="margin-bottom: 1.5rem; color: #2563eb">
-          Join the AI Revolution Today!
-        </h2>
-        <div class="modal-body">
-          <!-- Email Signup -->
-          <form id="emailForm" novalidate>
-            <label for="emailInput"
-              >Sign up for early access & updates ✉️</label
-            >
-            <input
-              type="email"
-              id="emailInput"
-              name="email"
-              placeholder="you@example.com"
-              required
-              aria-required="true"
-              aria-describedby="emailHelp"
-            />
-            <button type="submit">Notify Me</button>
-            <small id="emailHelp" style="color: #6b7280; margin-top: 0.5rem"
-              >No spam. Unsubscribe anytime.</small
-            >
-          </form>
-
-          <!-- Demo -->
-          <div class="demo" aria-live="polite" aria-atomic="true">
-            <div class="line user">
-              You: Hey AI Buddy, can you help me plan my week?
-            </div>
-            <div class="line ai">
-              AI Buddy: Absolutely! Let's set up your tasks and reminders
-              efficiently.
-            </div>
-            <div class="line user">You: Great! What about dinner ideas?</div>
-            <div class="line ai">
-              AI Buddy: How about a quick pasta recipe with fresh veggies? I can
-              send you the full recipe!
-            </div>
-          </div>
-        </div>
+        <span class="modal-close" id="closeModal">&times;</span>
+        <h2>Join the AI Revolution Today!</h2>
+        <form id="emailForm">
+          <label for="emailInput">Sign up for early access & updates ✉️</label>
+          <input
+            type="email"
+            id="emailInput"
+            name="email"
+            placeholder="you@example.com"
+            required
+          />
+          <button type="submit">Notify Me</button>
+        </form>
       </div>
     </div>
 
@@ -420,21 +421,18 @@
       const emailForm = document.getElementById("emailForm");
       const emailInput = document.getElementById("emailInput");
 
-      // Open modal
       getStartedBtn.addEventListener("click", () => {
         signupModal.style.display = "flex";
         signupModal.setAttribute("aria-hidden", "false");
         emailInput.focus();
       });
 
-      // Close modal
       closeModal.addEventListener("click", () => {
         signupModal.style.display = "none";
         signupModal.setAttribute("aria-hidden", "true");
         emailForm.reset();
       });
 
-      // Close modal when clicking outside content
       signupModal.addEventListener("click", (e) => {
         if (e.target === signupModal) {
           signupModal.style.display = "none";
@@ -443,13 +441,10 @@
         }
       });
 
-      // Form submit handler
       emailForm.addEventListener("submit", (e) => {
         e.preventDefault();
         if (emailInput.checkValidity()) {
-          alert(
-            `Thanks for signing up, ${emailInput.value}! We'll keep you updated.`
-          );
+          alert(`Thanks for signing up, ${emailInput.value}!`);
           emailForm.reset();
           signupModal.style.display = "none";
           signupModal.setAttribute("aria-hidden", "true");
