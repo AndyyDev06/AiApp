@@ -2,28 +2,32 @@ import express from "express";
 import cors from "cors";
 import axios from "axios";
 import path from "path";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+
+// This fixes __dirname for ES modules:
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const app = express();
-const PORT = 4000;
-
-// Serve static files from public folder
-app.use(express.static(path.join(process.cwd(), "public")));
+const PORT = 3000;
 
 app.use(cors());
 app.use(express.json());
 
-// Default route - serve landing.html
+// Serve static files correctly regardless of where node is run
+app.use(express.static(path.join(__dirname, "public")));
+
+// Default route:
 app.get("/", (req, res) => {
-  res.sendFile(path.join(process.cwd(), "public", "landing.html"));
+  res.sendFile(path.join(__dirname, "public", "landing.html"));
 });
 
-// Example AI chat endpoint (adjust to your AI backend)
 app.post("/chat", async (req, res) => {
   const { prompt } = req.body;
   if (!prompt) return res.status(400).json({ error: "No prompt provided" });
 
   try {
-    // Replace with your actual AI API call if needed
     const response = await axios.post(
       "http://localhost:11434/api/chat",
       { model: "ollama", prompt },
